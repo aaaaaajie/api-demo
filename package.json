@@ -1,0 +1,36 @@
+{
+  "name": "api-demo-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A demo monorepo with Node.js API and React frontend",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "concurrently \"npm run dev -w @api-demo/api\" \"npm run dev -w @api-demo/web\"",
+    "start": "npm run start --workspaces",
+    "clean": "npm run clean --workspaces",
+    "type-check": "npm run type-check --workspaces",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.1.0"
+  },
+  "keywords": [
+    "monorepo",
+    "typescript",
+    "react",
+    "nodejs",
+    "demo"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

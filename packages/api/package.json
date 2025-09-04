@@ -1,0 +1,28 @@
+{
+  "name": "@api-demo/api",
+  "version": "1.0.0",
+  "description": "Node.js API server for api-demo",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@api-demo/shared": "1.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^20.4.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.0"
+  }
+}
