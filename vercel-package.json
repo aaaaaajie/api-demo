@@ -1,0 +1,14 @@
+{
+  "name": "api-demo-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cd packages/web && npm run dev",
+    "build": "cd packages/web && npm run build",
+    "preview": "cd packages/web && npm run preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.0"
+  }
+}
