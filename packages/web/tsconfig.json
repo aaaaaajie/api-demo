@@ -22,11 +22,6 @@
       "@/*": ["src/*"]
     }
   },
-  "references": [
-    {
-      "path": "../shared"
-    }
-  ],
   "include": [
     "src/**/*"
   ],

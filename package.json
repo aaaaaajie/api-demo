@@ -7,7 +7,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build -w @api-demo/shared",
+    "build:api": "npm run build -w @api-demo/api",
+    "build:web": "npm run build -w @api-demo/web",
+    "build:prod": "npm run build:shared && npm run build:api && npm run build:web",
+    "build:frontend": "npm run build:shared && npm run build:web",
+    "start:prod": "npm run start -w @api-demo/api",
+    "start:api": "npm run start -w @api-demo/api",
+    "start:web": "npm run preview -w @api-demo/web",
     "dev": "concurrently \"npm run dev -w @api-demo/api\" \"npm run dev -w @api-demo/web\"",
     "start": "npm run start --workspaces",
     "clean": "npm run clean --workspaces",
